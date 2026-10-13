@@ -277,7 +277,7 @@
         .x { width: 34px; height: 34px; border-radius: 9px; border: 1px solid var(--line); background: #fff; font-size: 15px }
         .x:hover { background: #f1f5f9 }
 
-        /* Toasts — 0.5s duration */
+        /* Toasts — compact bottom-right notifications */
         #toasts { position: fixed; right: 18px; bottom: 18px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; max-width: calc(100vw - 36px) }
         .toast { display: flex; gap: 11px; align-items: flex-start; min-width: 280px; max-width: 380px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--accent); border-radius: 12px; padding: 12px 14px; box-shadow: var(--shadow-lg); animation: slide .22s ease; }
         .toast.out { animation: slideOut .22s ease forwards }
@@ -899,8 +899,8 @@
                 setTimeout(kill, ttl);
             }
             static success(t, m) { Toast.show(t, m, "success"); }
-            static error(t, m) { Toast.show(t, m, "error", 4600); }
-            static warning(t, m) { Toast.show(t, m, "warning", 3200); }
+            static error(t, m) { Toast.show(t, m, "error", 1000); }
+            static warning(t, m) { Toast.show(t, m, "warning", 1000); }
             static info(t, m) { Toast.show(t, m, "info"); }
         }
 
